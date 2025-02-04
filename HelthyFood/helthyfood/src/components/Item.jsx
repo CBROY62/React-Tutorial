@@ -1,9 +1,17 @@
 import  style from "./Item.module.css";
-function Item(props) {
+function Item({Fooditem , handleBuyButton}) {
+
+  const handaleBuyButtonClicked = (event)=>{
+    console.log(event);
+    console.log(`${Fooditem} item bing bought`)
+  }
   return (
     <>
       <li  className= {`${style['kg-item']} list-group-item`}>
-        <span className={`${style['kg-span']} `}> {props.Fooditem}</span>
+        <span className={`${style['kg-span']} `}> {Fooditem}</span>
+        <button className={`${style.button} btn btn-info`}
+         onClick={handleBuyButton}
+        >Buy</button>
        
       </li>
     </>

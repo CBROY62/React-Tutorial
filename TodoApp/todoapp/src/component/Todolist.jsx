@@ -1,5 +1,5 @@
 import Todoitems from "./TodoItems";
-function TodoList({ TodoList }) {
+function TodoList({ TodoList , onDeleteClick }) {
   return (
     <>
       <div className="container text-center">
@@ -8,6 +8,7 @@ function TodoList({ TodoList }) {
             key={item}
             todoName={item.todoName}
             TodoDate={item.TodoDate}
+            onDeleteClick={onDeleteClick}
           ></Todoitems>
         ))}
       </div>
